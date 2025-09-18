@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Awesome Subset Example</title>
+    <!-- These would be your optimized subset CSS files after running fa-subset.py -->
+    <link rel="stylesheet" href="../output/solid/fontawesome.solid.subset.css">
+    <link rel="stylesheet" href="../output/duotone/fontawesome.duotone.subset.css">
+</head>
+<body>
+    <h1>Font Awesome Subset Example</h1>
+
+    <h2>Solid Icons</h2>
+    <div class="icon-demo">
+        <i class="fa-solid fa-house"></i> House
+        <i class="fa-solid fa-user"></i> User
+        <i class="fa-solid fa-gear"></i> Settings
+        <i class="fa-solid fa-check"></i> Check
+    </div>
+
+    <h2>Duotone Icons</h2>
+    <div class="icon-demo">
+        <i class="fa-duotone fa-house"></i> House (duotone)
+        <i class="fa-duotone fa-shield-check"></i> Shield Check
+        <i class="fa-duotone fa-server"></i> Server
+        <i class="fa-duotone fa-envelope"></i> Envelope
+    </div>
+
+    <h2>Different Sizes</h2>
+    <div class="icon-demo">
+        <i class="fa-solid fa-house fa-xs"></i> xs
+        <i class="fa-solid fa-house fa-sm"></i> sm
+        <i class="fa-solid fa-house"></i> normal
+        <i class="fa-solid fa-house fa-lg"></i> lg
+        <i class="fa-solid fa-house fa-2x"></i> 2x
+    </div>
+
+    <p>This example demonstrates how icons will look after Font Awesome subsetting.</p>
+    <p>Run <code>fa-subset.py</code> against this HTML file to generate optimized fonts containing only these icons.</p>
+</body>
+</html>

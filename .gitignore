@@ -1,0 +1,45 @@
+# Font files (users must provide their own)
+*.woff
+*.woff2
+*.ttf
+*.otf
+*.eot
+
+# Font Awesome assets (not shipped with this tool)
+public/webfonts/
+public/css/*fontawesome*.css
+public/css/*duotone*.css
+public/css/*solid*.css
+public/css/*brands*.css
+public/css/all.css
+public/css/all.min.css
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output directories (for testing)
+fa-custom/
+fa-output/
+output/
