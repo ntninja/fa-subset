@@ -309,6 +309,7 @@ def subset_font(font_path, codepoints, out_path_woff2):
         f'--unicodes={unicodes_arg}',
         '--flavor=woff2',
         '--layout-features=*',
+        '--name-IDs=',
         '--no-hinting',
         f'--output-file={out_path_woff2}'
     ]
