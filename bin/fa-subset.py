@@ -52,16 +52,17 @@ STYLE_RX = re.compile(
     r')\b', re.I
 )
 
-# Match CSS selectors with content rules (handles compound selectors and duotone double-codepoints)
+# Match CSS selectors with content rules for FA5/6 (handles compound selectors and duotone double-codepoints) and CSS variable for FA7
 CSS_SELECTOR_CONTENT_RX = re.compile(
-    r'(?P<selector>[^{}]+?)\s*:\s*(?:before|after)\s*\{[^}]*?content\s*:\s*["\']\\(?P<hex>[0-9a-fA-F]{3,6})(?:\\[0-9a-fA-F]{3,6})?["\']',
+    r'(?P<selector>[^{}]+?)\s*(?::\s*(?:before|after)\s*\{[^}]*?content|\{[^}]*?--fa)\s*:\s*["\']\\(?P<hex>[0-9a-fA-F]{3,6})(?:\\[0-9a-fA-F]{3,6})?["\']',
     re.I
 )
 
+
 # Keep essential blocks: FA5 short style classes, FA6 long style classes, @font-face, and CSS variables.
 BASE_RULE_KEEPERS = (
-    re.compile(r'\.fa(?:s|r|l|b|d)?\b'),  # FA5 base
-    re.compile(r'\.fa-(?:solid|regular|light|thin|duotone|brands|sharp-solid|sharp-regular|sharp-light|sharp-thin|sharp-duotone)\b'),
+    re.compile(r'\.fa(?:s|r|l|b|d)?[^-]'),  # FA5 base
+    re.compile(r'\.fa-(?:solid|regular|light|thin|duotone|brands|sharp-solid|sharp-regular|sharp-light|sharp-thin|sharp-duotone)[^-]'),
     re.compile(r'@font-face', re.I),
     re.compile(r'--fa-'),  # FA6 CSS variables
 )
